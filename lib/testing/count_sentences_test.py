@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from count_sentences import MyString
-
 import io
 import sys
 
@@ -18,7 +17,7 @@ class TestMyString:
         captured_out = io.StringIO()
         sys.stdout = captured_out
         string = MyString()
-        string.value = 123
+        string.value = 123  # Set to a non-string value
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "The value must be a string.\n")
 
